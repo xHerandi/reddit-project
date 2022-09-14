@@ -19,7 +19,7 @@ print("Scopes: ",reddit.auth.scopes())
 subreddit = reddit.subreddit('moneydiariesactive')
 
 #retriving details from 1 result in subreddit search for test
-for post in subreddit.search('subscriptions', limit=1):
+for post in subreddit.search('flair:"MoneyDiary"', limit=1):
     print(f"Title: {post.title}")   #prints post title
     print(f"Submission ID: {post.id}")  #prints post id
     print(f"Submission Date: {post.created_utc}")  #post date in unix time
@@ -29,7 +29,7 @@ for post in subreddit.search('subscriptions', limit=1):
 
 # get count of results
 amt_post = []
-for post in subreddit.search('subscriptions', limit=1000):
+for post in subreddit.search('flair:"MoneyDiary"', limit=1000):
     amt_post.append(post)
 
 print("Amount of post: ",len(amt_post))
@@ -37,7 +37,7 @@ print("Amount of post: ",len(amt_post))
 
 #Opening data in a pandas dataframe then saving it to a csv file
 posts = []
-for post in subreddit.search('subscriptions', limit=1000):
+for post in subreddit.search('flair:"MoneyDiary"', limit=1000):
     posts.append(
         [
             post.id,
