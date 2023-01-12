@@ -11,4 +11,4 @@ My inspiration for this project was my personal delight from reading Money Diari
 Money Diaries follow a template that consists of a few different sections however, not all posts include the same amount of details. My next step is to parse through the posts and break them down into meaningful categories - similar to the template format. <br/>
 
 <br>
-The project is ongoing.
+This project is ongoing.
